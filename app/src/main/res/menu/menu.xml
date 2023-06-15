@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_item1"
+        android:title="Menu Item 1"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_item2"
+        android:title="Menu Item 2"
+        android:icon="@drawable/baseline_menu_book_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_item3"
+        android:title="Menu Item 3"
+        android:icon="@drawable/baseline_document_scanner_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_item4"
+        android:title="Menu Item 4"
+        android:icon="@drawable/baseline_bookmark_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_item5"
+        android:title="Menu Item 5"
+        android:icon="@drawable/profile"
+        app:showAsAction="ifRoom" />
+</menu>

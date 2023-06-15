@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Citradisi2</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="photo">Ambil Foto</string>
+    <string name="switch_camera">Putar kamera</string>
+    <string name="wait">Mohon menunggu</string>
+    <string name="picture_failed">Gagal mengambil gambar</string>
+    <string name="camera_failed">Kamera gagal beroperasi</string>
+    <string name="hello_blank_fragment">fragment</string>
+    <string name="Beranda">Beranda</string>
+    <string name="Bookmark">BookmarkSearchlist</string>
+    <string name="Scan">scan</string>
+    <string name="favorite">favoriteMark</string>
+</resources>

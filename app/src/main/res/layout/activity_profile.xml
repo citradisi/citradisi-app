@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    tools:context=".view.profile.ProfileActivity">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image"
+        android:layout_alignBottom="@id/image"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:text="@tools:sample/full_names" />
+
+    <!-- Header: Tempat (Place) -->
+    <TextView
+        android:id="@+id/placeNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="Nama Tempat"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Bookmark and Detail Feedback Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/placeNameTextView"
+        android:layout_marginTop="8dp">
+
+        <!-- Bookmark -->
+        <TextView
+            android:id="@+id/bookmarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="Bookmark" />
+
+        <!-- Detail Feedback -->
+        <TextView
+            android:id="@+id/feedbackTextView"
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="Feedback Pengguna"
+            android:textSize="18sp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/img_dish"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</RelativeLayout>
