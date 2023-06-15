@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_beranda" />
     <fragment
         android:id="@+id/scanFragment"
-        android:name="com.example.citradisi2a.view.scan.ScanFragment"
+        android:name="com.example.citradisi2a.view.detail.ScanFragment"
         android:label="ScanFragment" />
     <fragment
         android:id="@+id/listFavoriteFragment"
@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_list_favorite"/>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.citradisi2a.view.profile.ProfileFragment"
+        android:name="com.example.citradisi2a.view.home.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

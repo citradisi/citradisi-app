@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.citradisi2a.R
 import com.example.citradisi2a.databinding.FragmentLoginBinding
 import com.example.citradisi2a.databinding.FragmentRegisterBinding
@@ -31,6 +32,9 @@ class RegisterFragment : Fragment() {
                 binding.editTextEmail.text.toString(),
                 binding.editTextPassword.text.toString()
             )
+        }
+        binding.textViewSignIn.setOnClickListener {
+            findNavController().navigate(R.id.loginFragment)
         }
         return binding.root
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".view.scan.DetailFragment">
+    tools:context=".view.detail.DetailFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -25,10 +25,10 @@
 
 
 
-            <com.makeramen.roundedimageview.RoundedImageView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_250sdp"
-                android:id="@+id/imgFood"
+                android:id="@+id/imgItem"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 android:src="@drawable/rectangle1"
@@ -44,17 +44,17 @@
                 app:titleTextColor="@color/white"/>
 
             <ImageButton
-                android:id="@+id/imgToolbarBtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_margin="@dimen/_10sdp"
-                android:background="@drawable/btn_bg2"
                 android:paddingStart="@dimen/_12sdp"
                 android:paddingTop="@dimen/_8sdp"
                 android:paddingEnd="@dimen/_4sdp"
                 android:paddingBottom="@dimen/_8sdp"
-                android:src="@drawable/ic_back" />
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/btn_bg2"
+                android:id="@+id/imgToolbarBtnBack"
+                android:src="@drawable/ic_back"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -92,13 +92,13 @@
                 app:cardElevation="@dimen/_5sdp">
 
                 <TextView
-                    android:id="@+id/textViewFoodName"
-                    android:layout_width="248dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_bold"
-                    android:padding="@dimen/_10sdp"
-                    android:text="Food name"
                     android:textAlignment="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Category name"
+                    android:id="@+id/tvFoodName"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15ssp" />
 
@@ -169,7 +169,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textViewIngredients"
+                        android:id="@+id/tvIngredients"
                         android:layout_width="match_parent"
                         android:layout_height="138dp"
                         android:fontFamily="@font/gilroy_light"
@@ -206,16 +206,17 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textViewInstructions"
+                        android:id="@+id/tvInstructions"
                         android:layout_width="match_parent"
-                        android:layout_height="2dp"
+                        android:layout_height="138dp"
                         android:fontFamily="@font/gilroy_light"
-                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_10sdp"
                         android:paddingTop="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_10sdp"
                         android:textColor="@color/hintTextColor"
                         android:textSize="@dimen/_10ssp"
                         android:textStyle="bold" />
+
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

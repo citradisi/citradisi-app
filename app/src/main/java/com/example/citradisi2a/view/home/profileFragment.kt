@@ -1,4 +1,4 @@
-package com.example.citradisi2a.view.profile
+package com.example.citradisi2a.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

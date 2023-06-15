@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.citradisi2a.model.data.Auth.BodyRegister
+import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.repository.Repository
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -20,6 +21,9 @@ class HomeViewModel(val repository: Repository) : ViewModel()  {
 
     private val _msg = MutableLiveData<String>()
     val msg: LiveData<String> = _msg
+
+    private val _detailFoodScan = MutableLiveData<FoodScanImageResponse>()
+    val detailFoodScan: LiveData<FoodScanImageResponse> = _detailFoodScan
 
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean> = _loading
@@ -36,10 +40,12 @@ class HomeViewModel(val repository: Repository) : ViewModel()  {
                 val result = repository.scanImage(
                     bitmapToMultipart(image)
                 )
+                _detailFoodScan.value = result.getOrThrow()
                 _msg.value = result.getOrThrow().meta.message
                 _loading.value = false
             } catch (e: Exception) {
                 _msg.value = e.message
+                _loading.value = false
             }
         }
     }

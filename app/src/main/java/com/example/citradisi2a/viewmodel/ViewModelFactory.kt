@@ -35,8 +35,8 @@ class ViewModelFactory private constructor(private val repository: Repository) :
             modelClass.isAssignableFrom(ProfileViewModel::class.java)->{
                 ProfileViewModel(repository) as T
             }
-            modelClass.isAssignableFrom(ScanViewModel::class.java)->{
-                ScanViewModel(repository) as T
+            modelClass.isAssignableFrom(DetailViewModel::class.java)->{
+                DetailViewModel(repository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

@@ -25,17 +25,24 @@
         <TextView
             android:id="@+id/food_name"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:text="Food Name"
-            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="Food Name" />
 
         <!-- Food Description -->
+        <TextView
+            android:id="@+id/food_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:text="Food Description" />
         <!-- Food Price -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
@@ -51,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textColor="@android:color/black"
-                android:textSize="27sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
     </LinearLayout>

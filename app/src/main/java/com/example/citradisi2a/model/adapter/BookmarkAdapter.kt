@@ -28,11 +28,11 @@ class BookmarkAdapter(private val bookmarkItems: List<BookmarkItem>) :
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.food_name)
-        private val descriptionTextView: TextView = itemView.findViewById(R.id.food_description)
+//        private val descriptionTextView: TextView = itemView.findViewById(R.id.food_description)
 
         fun bind(bookmarkItem: BookmarkItem) {
             titleTextView.text = bookmarkItem.title
-            descriptionTextView.text = bookmarkItem.description
+//            descriptionTextView.text = bookmarkItem.description
         }
     }
 }

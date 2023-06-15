@@ -5,6 +5,6 @@
     android:orientation="vertical"
     android:padding="16dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.profile.ProfileFragment">
+    tools:context=".view.home.ProfileFragment">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

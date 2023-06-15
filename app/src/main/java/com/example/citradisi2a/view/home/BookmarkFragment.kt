@@ -1,4 +1,4 @@
-package com.example.citradisi2a.view.bookmark
+package com.example.citradisi2a.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.citradisi2a.R
 import com.example.citradisi2a.databinding.FragmentBookmarkBinding
-import com.example.citradisi2a.databinding.FragmentLoginBinding
-import com.example.citradisi2a.view.scan.DetailFragment
-import com.example.citradisi2a.viewmodel.AuthViewModel
 import com.example.citradisi2a.viewmodel.BookmarkViewModel
 
 class BookmarkFragment : Fragment() {

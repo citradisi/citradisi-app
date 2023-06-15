@@ -75,20 +75,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
             android:background="@drawable/bg_btn_daftar" />
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
@@ -115,14 +105,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="42dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="103dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="102dp"
         android:padding="12dp"
         android:text="Sign in"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="12dp"
         android:textStyle="bold" />
+
     <ImageView
         android:layout_width="120dp"
         android:layout_height="wrap_content"/>

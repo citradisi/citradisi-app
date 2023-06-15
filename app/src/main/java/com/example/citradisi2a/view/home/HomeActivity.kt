@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.citradisi2a.R
 import com.example.citradisi2a.databinding.ActivityMainBinding
+import com.example.citradisi2a.view.detail.DetailActivity
 import com.example.citradisi2a.viewmodel.HomeViewModel
 import com.example.citradisi2a.viewmodel.ViewModelFactory
 
@@ -37,6 +38,10 @@ class HomeActivity : AppCompatActivity() {
             if (it != null) {
                 homeViewModel.scan(it)
             }
+        }
+        homeViewModel.detailFoodScan.observe(this) {
+            Log.e("food scan", it.data.food_name)
+            navigateToDetail(it.data.food_slug)
         }
         homeViewModel.msg.observe(this) {
             Log.e("home activity", it)
@@ -68,7 +73,12 @@ class HomeActivity : AppCompatActivity() {
 
 
 
-
+    private fun navigateToDetail(food_slug: String) {
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("food_slug", food_slug)
+        startActivity(intent)
+        finish()
+    }
 
     val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
