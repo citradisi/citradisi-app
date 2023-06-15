@@ -21,6 +21,9 @@ class BookmarkFragment : Fragment() {
         // Inflate the layout for this fragment
         bookmarkViewModel = ViewModelProvider(requireActivity())[BookmarkViewModel::class.java]
         binding = FragmentBookmarkBinding.inflate(inflater,container,false)
+
+
+
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 

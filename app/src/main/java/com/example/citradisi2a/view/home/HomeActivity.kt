@@ -34,11 +34,15 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         homeViewModel = ViewModelProvider(this, ViewModelFactory.getInstance(this))[HomeViewModel::class.java]
+        homeViewModel.getAllFood()
         homeViewModel.bitmap.observe(this) {
             if (it != null) {
                 homeViewModel.scan(it)
             }
         }
+//        homeViewModel.getAllFood.observe(this) {
+//
+//        }
         homeViewModel.detailFoodScan.observe(this) {
             Log.e("food scan", it.data.food_name)
             navigateToDetail(it.data.food_slug)
