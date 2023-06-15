@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Citradisi2</string>
+    <string name="app_name">Citradisi</string>
     <string name="camera">Kamera</string>
     <string name="gallery">Galeri</string>
     <string name="photo">Ambil Foto</string>
@@ -10,6 +10,11 @@
     <string name="hello_blank_fragment">fragment</string>
     <string name="Beranda">Beranda</string>
     <string name="Bookmark">BookmarkSearchlist</string>
-    <string name="Scan">scan</string>
+    <string name="scan">Scan</string>
     <string name="favorite">favoriteMark</string>
+    <string name="food">All Foods</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="profile">Profile</string>
+    <string name="special_offer">Special Offer</string>
+    <string name="food_recomendation">Food Recomendation</string>
 </resources>

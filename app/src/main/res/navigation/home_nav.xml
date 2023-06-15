@@ -17,7 +17,8 @@
     <fragment
         android:id="@+id/listFavoriteFragment"
         android:name="com.example.citradisi2a.view.bookmark.ListFavoriteFragment"
-        android:label="ListFavoriteFragment" />
+        android:label="ListFavoriteFragment"
+        tools:layout="@layout/fragment_list_favorite"/>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.citradisi2a.view.profile.ProfileFragment"

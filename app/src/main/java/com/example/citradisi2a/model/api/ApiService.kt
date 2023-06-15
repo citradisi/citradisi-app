@@ -12,6 +12,7 @@ import com.example.citradisi2a.model.data.Love.MostLoveResponse
 import com.example.citradisi2a.model.data.bookmark.BookmarkDeleteResponse
 import com.example.citradisi2a.model.data.bookmark.BookmarkResponse
 import com.example.citradisi2a.model.data.bookmark.BookmarkStoreBody
+import com.example.citradisi2a.model.data.bookmark.BookmarkStoreResponse
 import com.example.citradisi2a.model.data.food.FoodDetailResponse
 import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.FoodSearchBody
@@ -87,7 +88,7 @@ interface ApiService {
     suspend fun bookmarkStore(
         @Header("Authorization") token: String,
         @Body bookmarkStoreBody: BookmarkStoreBody
-    ):BookmarkResponse
+    ):BookmarkStoreResponse
     @POST("bookmark/{id}")
     suspend fun bookmarkDelete(
         @Header("Authorization") token: String,

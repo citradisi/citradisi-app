@@ -28,7 +28,7 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_250sdp"
-                android:id="@+id/imgItem"
+                android:id="@+id/imgFood"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 android:src="@drawable/rectangle1"
@@ -44,17 +44,17 @@
                 app:titleTextColor="@color/white"/>
 
             <ImageButton
+                android:id="@+id/imgToolbarBtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/btn_bg2"
                 android:paddingStart="@dimen/_12sdp"
                 android:paddingTop="@dimen/_8sdp"
                 android:paddingEnd="@dimen/_4sdp"
                 android:paddingBottom="@dimen/_8sdp"
-                android:layout_margin="@dimen/_10sdp"
-                android:layout_gravity="start"
-                android:background="@drawable/btn_bg2"
-                android:id="@+id/imgToolbarBtnBack"
-                android:src="@drawable/ic_back"/>
+                android:src="@drawable/ic_back" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -92,13 +92,13 @@
                 app:cardElevation="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/textViewFoodName"
+                    android:layout_width="248dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_bold"
-                    android:textAlignment="center"
                     android:padding="@dimen/_10sdp"
-                    android:text="Category name"
-                    android:id="@+id/tvCategory"
+                    android:text="Food name"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15ssp" />
 
@@ -169,7 +169,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvIngredients"
+                        android:id="@+id/textViewIngredients"
                         android:layout_width="match_parent"
                         android:layout_height="138dp"
                         android:fontFamily="@font/gilroy_light"
@@ -206,7 +206,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvInstructions"
+                        android:id="@+id/textViewInstructions"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:fontFamily="@font/gilroy_light"

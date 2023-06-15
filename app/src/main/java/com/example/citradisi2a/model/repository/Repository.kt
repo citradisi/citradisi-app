@@ -12,10 +12,14 @@ import com.example.citradisi2a.model.data.Auth.BodyRegister
 import com.example.citradisi2a.model.data.Auth.LoginBody
 import com.example.citradisi2a.model.data.Auth.LoginResponse
 import com.example.citradisi2a.model.data.Auth.RegisterResponse
+import com.example.citradisi2a.model.data.Love.LoveDeleteResponse
 import com.example.citradisi2a.model.data.Love.LoveStoreBody
+import com.example.citradisi2a.model.data.Love.LoveStoreResponse
 import com.example.citradisi2a.model.data.Love.MostLoveResponse
+import com.example.citradisi2a.model.data.bookmark.BookmarkDeleteResponse
 import com.example.citradisi2a.model.data.bookmark.BookmarkResponse
 import com.example.citradisi2a.model.data.bookmark.BookmarkStoreBody
+import com.example.citradisi2a.model.data.bookmark.BookmarkStoreResponse
 import com.example.citradisi2a.model.data.food.FoodDetailResponse
 import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.FoodSearchBody
@@ -52,20 +56,35 @@ class Repository(private val api: ApiService, private val datastore: AuthDataSto
 
     val token = datastore.getAuthKey().asLiveData()
     suspend fun status(): Boolean {
-        val result = api.status(token.value!!)
+        val result = api.status("Bearer " + token.value!!)
         return result.meta.status == "success"
     }
 
-    suspend fun getAllFood(): GetAllFoodResponse {
-        return api.getAllFood()
+    suspend fun getAllFood(): Result<GetAllFoodResponse> {
+        try {
+            val result = api.getAllFood()
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
     }
 
-    suspend fun foodSearch(foodSearchBody: FoodSearchBody): FoodSearchResponse {
-        return api.foodSearch(foodSearchBody)
+    suspend fun foodSearch(foodSearchBody: FoodSearchBody): Result<FoodSearchResponse> {
+        try {
+            val result = api.foodSearch(foodSearchBody)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
     }
 
-    suspend fun foodDetail(slug: String): FoodDetailResponse {
-        return api.foodDetail(token.value!!, slug)
+    suspend fun foodDetail(slug: String): Result<FoodDetailResponse> {
+        try {
+            val result = api.foodDetail("Bearer " + token.value!!, slug)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
     }
 
     suspend fun scanImage(file: MultipartBody.Part) : Result<FoodScanImageResponse>{
@@ -79,40 +98,58 @@ class Repository(private val api: ApiService, private val datastore: AuthDataSto
 
     }
 
-    suspend fun bookmarkUser(): BookmarkResponse {
-        return api.bookmarkUser(token.value!!)
-    }
-
-    suspend fun bookmarkStore(bookmarkStoreBody: BookmarkStoreBody) {
-        val result = api.bookmarkStore(token.value!!, bookmarkStoreBody)
-        if (result.meta.status == "success") {
-            // jika sukses
-        } else {
-            // jika error
+    suspend fun bookmarkUser(): Result<BookmarkResponse> {
+        try {
+            val result = api.bookmarkUser("Bearer " + token.value!!)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
         }
     }
 
-    suspend fun bookmarkDelete(id: Int): Boolean {
-        val result = api.bookmarkDelete(token.value!!, id)
-        return result.meta.status == "success"
-    }
-
-    suspend fun mostLove(): MostLoveResponse {
-        return api.mostLoves(token.value!!)
-    }
-
-    suspend fun loveStore(loveStoreBody: LoveStoreBody) {
-        val result = api.loveStore(token.value!!, loveStoreBody)
-        if (result.meta.status == "success") {
-            // Jika sukses
-        } else {
-            // Jika error
+    suspend fun bookmarkStore(bookmarkStoreBody: BookmarkStoreBody): Result<BookmarkStoreResponse> {
+        try {
+            val result = api.bookmarkStore("Bearer " + token.value!!, bookmarkStoreBody)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
         }
     }
 
-    suspend fun loveDelete(id: Int): Boolean {
-        val result = api.loveDelete(token.value!!, id)
-        return result.meta.status == "success"
+    suspend fun bookmarkDelete(id: Int): Result<BookmarkDeleteResponse> {
+        try {
+            val result = api.bookmarkDelete("Bearer " + token.value!!, id)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
+    }
+
+    suspend fun mostLove(): Result<MostLoveResponse> {
+        try {
+            val result = api.mostLoves("Bearer " + token.value!!)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
+    }
+
+    suspend fun loveStore(loveStoreBody: LoveStoreBody): Result<LoveStoreResponse> {
+        try {
+            val result = api.loveStore("Bearer " + token.value!!, loveStoreBody)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
+    }
+
+    suspend fun loveDelete(id: Int): Result<LoveDeleteResponse> {
+        try {
+            val result = api.loveDelete("Bearer " + token.value!!, id)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
     }
 
     companion object {
