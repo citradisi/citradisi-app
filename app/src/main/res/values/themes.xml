@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Citradisi2a." parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/youtube</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/brown</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="layout_mm">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ThemeOverlay.Search" parent="Base.Theme.Citradisi2a.">
+        <!-- Primary brand color. -->
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/hintTextColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
