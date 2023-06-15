@@ -13,8 +13,8 @@
     <item android:id="@+id/bookmark_nav"
         android:title="@string/bookmark"
         android:icon="@drawable/baseline_bookmark_24"/>
-    <item android:id="@+id/profile_nav"
+    <item android:id="@+id/logout_nav"
         android:title="@string/profile"
-        android:icon="@drawable/profile"/>
+        android:icon="@drawable/logout"/>
 
 </menu>

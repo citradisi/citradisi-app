@@ -18,6 +18,7 @@ import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.FoodSearchBody
 import com.example.citradisi2a.model.data.food.FoodSearchResponse
 import com.example.citradisi2a.model.data.food.GetAllFoodResponse
+import com.example.citradisi2a.model.data.food.SpecialOfferResponse
 import kotlinx.coroutines.flow.Flow
 import okhttp3.MultipartBody
 import retrofit2.http.Body
@@ -58,6 +59,10 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Path("food_slug") food_slug:String,
     ): FoodDetailResponse
+
+    @POST("food/special")
+    suspend fun specialOffer(
+    ): SpecialOfferResponse
 
     @Multipart
     @POST("food/scan")

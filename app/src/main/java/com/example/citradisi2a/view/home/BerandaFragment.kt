@@ -37,6 +37,12 @@ class BerandaFragment : Fragment() {
                 binding.rvSubCategory.adapter = adapter
             }
         }
+        homeViewModel.specialOffer.observe(requireActivity()) {
+            if (it.meta.status != "error") {
+//                Special Offer disini ygy
+                binding.specialOffer.text = it.data.food_name
+            }
+        }
         return binding.root
     }
     private fun navigateToDetail(food_slug: String) {

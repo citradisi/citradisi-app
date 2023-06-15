@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +5,18 @@
     android:layout_height="wrap_content"
     android:padding="8dp"
     tools:context=".view.profile.ProfileActivity">
+
+
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logout" />
+
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="60dp"
@@ -24,7 +35,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         tools:text="@tools:sample/full_names" />
 
-    <!-- Header: Tempat (Place) -->
     <TextView
         android:id="@+id/placeNameTextView"
         android:layout_width="wrap_content"
@@ -36,7 +46,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!-- Bookmark and Detail Feedback Container -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +54,7 @@
         android:layout_below="@id/placeNameTextView"
         android:layout_marginTop="8dp">
 
-        <!-- Bookmark -->
+
         <TextView
             android:id="@+id/bookmarkTextView"
             android:layout_width="wrap_content"
@@ -54,7 +64,7 @@
             android:padding="16dp"
             android:text="Bookmark" />
 
-        <!-- Detail Feedback -->
+
         <TextView
             android:id="@+id/feedbackTextView"
             android:layout_width="233dp"
@@ -63,6 +73,8 @@
             android:padding="16dp"
             android:text="Feedback Pengguna"
             android:textSize="18sp" />
+
+
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_260sdp"
@@ -77,4 +89,5 @@
             android:layout_height="match_parent" />
 
     </LinearLayout>
+
 </RelativeLayout>

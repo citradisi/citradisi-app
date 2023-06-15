@@ -25,6 +25,7 @@ import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.FoodSearchBody
 import com.example.citradisi2a.model.data.food.FoodSearchResponse
 import com.example.citradisi2a.model.data.food.GetAllFoodResponse
+import com.example.citradisi2a.model.data.food.SpecialOfferResponse
 import com.example.citradisi2a.model.references.AuthDataStore
 import okhttp3.MultipartBody
 
@@ -51,6 +52,14 @@ class Repository(private val api: ApiService, private val datastore: AuthDataSto
             return Result.success(result)
         } catch (e: Exception) {
             return Result.failure(e)
+        }
+    }
+
+    suspend fun logout() {
+        try {
+            datastore.deleteAuthKey()
+        } catch (e: Exception) {
+
         }
     }
 
@@ -81,6 +90,15 @@ class Repository(private val api: ApiService, private val datastore: AuthDataSto
     suspend fun foodDetail(slug: String): Result<FoodDetailResponse> {
         try {
             val result = api.foodDetail("Bearer " + token.value!!, slug)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
+    }
+
+    suspend fun specialOffer(): Result<SpecialOfferResponse> {
+        try {
+            val result = api.specialOffer()
             return Result.success(result)
         } catch (e: Exception) {
             return Result.failure(e)

@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.citradisi2a.model.data.Auth.BodyRegister
 import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.GetAllFoodResponse
+import com.example.citradisi2a.model.data.food.SpecialOfferResponse
 import com.example.citradisi2a.model.repository.Repository
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -28,6 +29,9 @@ class HomeViewModel(val repository: Repository) : ViewModel()  {
 
     private val _getAllFood = MutableLiveData<GetAllFoodResponse>()
     val getAllFood: LiveData<GetAllFoodResponse> = _getAllFood
+
+    private val _specialOffer = MutableLiveData<SpecialOfferResponse>()
+    val specialOffer: LiveData<SpecialOfferResponse> = _specialOffer
 
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean> = _loading
@@ -60,6 +64,21 @@ class HomeViewModel(val repository: Repository) : ViewModel()  {
                 _loading.value = true
                 val result = repository.getAllFood()
                 _getAllFood.value = result.getOrThrow()
+                _msg.value = result.getOrThrow().meta.message
+                _loading.value = false
+            } catch (e: Exception) {
+                _msg.value = e.message
+                _loading.value = false
+            }
+        }
+    }
+
+    fun specialOffer() {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+                val result = repository.specialOffer()
+                _specialOffer.value = result.getOrThrow()
                 _msg.value = result.getOrThrow().meta.message
                 _loading.value = false
             } catch (e: Exception) {

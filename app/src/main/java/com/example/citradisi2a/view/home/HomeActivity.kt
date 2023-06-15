@@ -18,11 +18,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.citradisi2a.R
 import com.example.citradisi2a.databinding.ActivityMainBinding
+import com.example.citradisi2a.model.references.AuthDataStore
+import com.example.citradisi2a.model.repository.Repository
+import com.example.citradisi2a.view.auth.AuthActivity
 import com.example.citradisi2a.view.detail.DetailActivity
 import com.example.citradisi2a.viewmodel.HomeViewModel
 import com.example.citradisi2a.viewmodel.ViewModelFactory
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity() : AppCompatActivity() {
 
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var binding : ActivityMainBinding
@@ -35,14 +38,12 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         homeViewModel = ViewModelProvider(this, ViewModelFactory.getInstance(this))[HomeViewModel::class.java]
         homeViewModel.getAllFood()
+        homeViewModel.specialOffer()
         homeViewModel.bitmap.observe(this) {
             if (it != null) {
                 homeViewModel.scan(it)
             }
         }
-//        homeViewModel.getAllFood.observe(this) {
-//
-//        }
         homeViewModel.detailFoodScan.observe(this) {
             Log.e("food scan", it.data.food_name)
             navigateToDetail(it.data.food_slug)
