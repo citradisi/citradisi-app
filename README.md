@@ -15,7 +15,7 @@ use camera to identify your foods :)
 
 ## DETAIL PAGE
 ![WhatsApp Image 2023-06-16 at 16 14 15](https://github.com/citradisi/citradisi-app/assets/129200451/c8e90530-fedc-4bae-bd51-e5f03abdbe11)
-this one is the detail of the foods that you scan before
+# this one is the detail of the foods that you scan before
 
 ## PROFILE PAGE
 
