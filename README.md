@@ -3,6 +3,7 @@
  <p>Indonesia is a popular tourist destination known for its beautiful beaches, rich cultural heritage and diverse food culture. However, even though Indonesia has more than 17,000 islands and hundreds of traditional dishes, the true essence of Indonesian cuisine is often overlooked by tourists. This is caused by a lack of awareness and accessibility of information about traditional Indonesian food. Our project team aims to tackle this problem by developing a mobile application that will provide tourists with a platform to explore the rich and diverse culture of traditional Indonesian food. <p/>
 <p>We made a scan application for traditional Indonesian food with the aim that this Indonesian dish is better known to tourists
 The problem statement for our project is that tourists often miss the opportunity to experience the true essence of Indonesian cuisine. This is because they do not know the traditional dishes, ingredients and cooking methods used in Indonesian cuisine. In addition, the lack of available information and resources about traditional food makes it difficult for tourists to explore and experience the local food culture. </p>
+
 ## MOBILE DEVELOPMENT PATH
 
 ## ON BOARDING dan Login Pop Up Page
