@@ -14,7 +14,8 @@ The problem statement for our project is that tourists often miss the opportunit
 ## DETAIL PAGE
 ![WhatsApp Image 2023-06-16 at 16 14 15](https://github.com/citradisi/citradisi-app/assets/129200451/c8e90530-fedc-4bae-bd51-e5f03abdbe11)
 
-## SCAN, ANALYS PAGE
+## SCAN OR ANALYS PAGE
+![scan](https://github.com/citradisi/citradisi-app/assets/129200451/2403c78b-53a7-4942-b579-b0dd3ab87535)
 
 ## PROFILE PAGE
 
