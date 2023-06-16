@@ -8,7 +8,7 @@ The problem statement for our project is that tourists often miss the opportunit
 ## ON BOARDING dan Login Pop Up Page
 
 ## HOME PAGE
-![photo](https://drive.google.com/file/d/1kL6F4uH6JALWIxuee_DiKbJurR9Nus1z/view?usp=share_link)
+![beranda](https://github.com/citradisi/citradisi-app/assets/129200451/d13be34b-7cc8-4d08-8926-3ef284e07030)
 ## DETAIL PAGE
 
 ## SCAN, ANALYS PAGE
