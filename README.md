@@ -11,11 +11,15 @@ The problem statement for our project is that tourists often miss the opportunit
 
 ## HOME PAGE
 ![beranda](https://github.com/citradisi/citradisi-app/assets/129200451/d13be34b-7cc8-4d08-8926-3ef284e07030)
-## DETAIL PAGE
-![WhatsApp Image 2023-06-16 at 16 14 15](https://github.com/citradisi/citradisi-app/assets/129200451/c8e90530-fedc-4bae-bd51-e5f03abdbe11)
+you can know what;s recommendatioan for this app about tradtional indonesian food
 
 ## SCAN OR ANALYS PAGE
 ![scan](https://github.com/citradisi/citradisi-app/assets/129200451/2403c78b-53a7-4942-b579-b0dd3ab87535)
+use camera to identify your foods :)
+
+## DETAIL PAGE
+![WhatsApp Image 2023-06-16 at 16 14 15](https://github.com/citradisi/citradisi-app/assets/129200451/c8e90530-fedc-4bae-bd51-e5f03abdbe11)
+this one is the detail of the foods that you scan before
 
 ## PROFILE PAGE
 
