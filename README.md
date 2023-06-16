@@ -6,10 +6,13 @@ The problem statement for our project is that tourists often miss the opportunit
 ## MOBILE DEVELOPMENT PATH
 
 ## ON BOARDING dan Login Pop Up Page
+![sign up](https://github.com/citradisi/citradisi-app/assets/129200451/4037f34f-1145-4a54-82a3-954966cede32)
+![logun](https://github.com/citradisi/citradisi-app/assets/129200451/c1f0af02-bf81-4b1e-8369-94f444b6ed29)
 
 ## HOME PAGE
 ![beranda](https://github.com/citradisi/citradisi-app/assets/129200451/d13be34b-7cc8-4d08-8926-3ef284e07030)
 ## DETAIL PAGE
+![WhatsApp Image 2023-06-16 at 16 14 15](https://github.com/citradisi/citradisi-app/assets/129200451/c8e90530-fedc-4bae-bd51-e5f03abdbe11)
 
 ## SCAN, ANALYS PAGE
 
