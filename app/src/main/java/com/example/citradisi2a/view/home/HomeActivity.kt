@@ -77,12 +77,12 @@ class HomeActivity() : AppCompatActivity() {
                     dispatchTakePictureIntent()
                     true
                 }
-                R.id.profile_nav -> {
-                    Navigation.findNavController(
-                        this, binding.fragmentContainerView2.id
-                    ).navigate(R.id.profileFragment)
-                    true
-                }
+//                R.id.profile_nav -> {
+//                    Navigation.findNavController(
+//                        this, binding.fragmentContainerView2.id
+//                    ).navigate(R.id.profileFragment)
+//                    true
+//                }
                 else -> false
             }
         }
