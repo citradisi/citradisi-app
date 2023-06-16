@@ -28,7 +28,7 @@ this one is the detail of the foods that you scan before
 ## LINKS
 - APK FILE : https://drive.google.com/file/d/1E3ZV4yEM_kjJrnXmGSsh9_7p6Vtz8gLK/view?usp=sharing
 - DEMO VIDEO: https://www.youtube.com/watch?v=nSHcQ36TWNU&feature=youtu.be
-- FIGMA DESIGN :https://www.figma.com/file/QZTuuBrlqwRA6YDnGS1L11/Wireframe?type=design&node-id=6%3A5&t=VJ4aI7J3erU2wSMN-1
+- FIGMA DESIGN : https://www.figma.com/file/QZTuuBrlqwRA6YDnGS1L11/Wireframe?type=design&node-id=6%3A5&t=VJ4aI7J3erU2wSMN-1
 
 ## TECH STACK
 
