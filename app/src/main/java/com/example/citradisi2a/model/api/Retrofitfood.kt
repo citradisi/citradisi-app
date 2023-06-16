@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit
 class Retrofitfood {
     companion object{
         fun getApiService(): ApiService {
-//            val gson = GsonBuilder().setLenient().create()
             val loggingInterceptor =
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 

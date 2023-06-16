@@ -2,7 +2,7 @@ package com.example.citradisi2a.model.data.food
 
 import java.sql.Timestamp
 
-data class DataSpecial(
+data class DataSpecialOffer(
     val id:Int,
     val food_name:String,
     val food_slug:String,
@@ -15,5 +15,5 @@ data class DataSpecial(
     val updated_at: Timestamp,
 )
 data class SpecialOfferResponse(
-    val meta: Meta, val data: DataSpecial, val token:String
+    val meta: Meta, val data: List<DataSpecialOffer>, val token:String
 )

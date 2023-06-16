@@ -27,9 +27,10 @@ class ListFavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-//        bookmarkViewModel = ViewModelProvider(requireActivity())[BookmarkViewModel::class.java]
-//        binding = FragmentListFavoriteBinding.inflate(inflater,container,false)
+        bookmarkViewModel = ViewModelProvider(requireActivity())[BookmarkViewModel::class.java]
+        binding = FragmentListFavoriteBinding.inflate(inflater,container,false)
         return inflater.inflate(R.layout.fragment_list_favorite, container, false)
+//        return binding.root
     }
 
 

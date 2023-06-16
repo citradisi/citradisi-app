@@ -46,7 +46,6 @@ interface ApiService {
     ): StatusResponse
     @GET("food")
     suspend fun getAllFood(
-
     ): GetAllFoodResponse
 
     @POST("food")

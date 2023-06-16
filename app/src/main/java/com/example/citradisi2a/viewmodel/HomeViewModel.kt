@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.citradisi2a.model.data.Auth.BodyRegister
+import com.example.citradisi2a.model.data.Auth.StatusResponse
 import com.example.citradisi2a.model.data.food.FoodScanImageResponse
 import com.example.citradisi2a.model.data.food.GetAllFoodResponse
 import com.example.citradisi2a.model.data.food.SpecialOfferResponse

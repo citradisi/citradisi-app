@@ -12,6 +12,7 @@ import com.example.citradisi2a.model.data.Auth.BodyRegister
 import com.example.citradisi2a.model.data.Auth.LoginBody
 import com.example.citradisi2a.model.data.Auth.LoginResponse
 import com.example.citradisi2a.model.data.Auth.RegisterResponse
+import com.example.citradisi2a.model.data.Auth.StatusResponse
 import com.example.citradisi2a.model.data.Love.LoveDeleteResponse
 import com.example.citradisi2a.model.data.Love.LoveStoreBody
 import com.example.citradisi2a.model.data.Love.LoveStoreResponse
@@ -64,9 +65,13 @@ class Repository(private val api: ApiService, private val datastore: AuthDataSto
     }
 
     val token = datastore.getAuthKey().asLiveData()
-    suspend fun status(): Boolean {
-        val result = api.status("Bearer " + token.value!!)
-        return result.meta.status == "success"
+    suspend fun status(): Result<StatusResponse> {
+        try {
+            val result = api.status("Bearer " + token.value!!)
+            return Result.success(result)
+        } catch (e: Exception) {
+            return Result.failure(e)
+        }
     }
 
     suspend fun getAllFood(): Result<GetAllFoodResponse> {

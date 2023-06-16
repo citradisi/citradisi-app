@@ -48,6 +48,7 @@ class HomeActivity() : AppCompatActivity() {
             Log.e("food scan", it.data.food_name)
             navigateToDetail(it.data.food_slug)
         }
+
         homeViewModel.msg.observe(this) {
             Log.e("home activity", it)
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
@@ -55,6 +56,12 @@ class HomeActivity() : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.beranda_nav -> {
+                    Navigation.findNavController(
+                        this, binding.fragmentContainerView2.id
+                    ).navigate(R.id.berandaFragment)
+                    true
+                }
+                R.id.food_nav -> {
                     Navigation.findNavController(
                         this, binding.fragmentContainerView2.id
                     ).navigate(R.id.berandaFragment)
@@ -68,6 +75,12 @@ class HomeActivity() : AppCompatActivity() {
                 }
                 R.id.scan_nav -> {
                     dispatchTakePictureIntent()
+                    true
+                }
+                R.id.profile_nav -> {
+                    Navigation.findNavController(
+                        this, binding.fragmentContainerView2.id
+                    ).navigate(R.id.profileFragment)
                     true
                 }
                 else -> false

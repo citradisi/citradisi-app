@@ -12,6 +12,7 @@ import com.example.citradisi2a.R
 import com.example.citradisi2a.databinding.FragmentBerandaBinding
 import com.example.citradisi2a.databinding.FragmentLoginBinding
 import com.example.citradisi2a.model.adapter.AdapterRecommendation
+import com.example.citradisi2a.model.adapter.AdapterSpecialOffer
 import com.example.citradisi2a.view.detail.DetailActivity
 import com.example.citradisi2a.viewmodel.AuthViewModel
 import com.example.citradisi2a.viewmodel.HomeViewModel
@@ -19,7 +20,8 @@ import com.example.citradisi2a.viewmodel.HomeViewModel
 class BerandaFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var binding : FragmentBerandaBinding
-    private lateinit var adapter: AdapterRecommendation
+    private lateinit var adapterRecommendation: AdapterRecommendation
+    private lateinit var adapterSpecialOffer: AdapterSpecialOffer
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,18 +31,22 @@ class BerandaFragment : Fragment() {
         binding = FragmentBerandaBinding.inflate(inflater,container,false)
         homeViewModel.getAllFood.observe(requireActivity()) {
             if (it.meta.status != "error") {
-                adapter = AdapterRecommendation(it.data,
+                adapterRecommendation = AdapterRecommendation(it.data,
                 onClick = {food_slug ->
                     navigateToDetail(food_slug)
                 })
                 binding.rvSubCategory.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
-                binding.rvSubCategory.adapter = adapter
+                binding.rvSubCategory.adapter = adapterRecommendation
             }
         }
         homeViewModel.specialOffer.observe(requireActivity()) {
             if (it.meta.status != "error") {
-//                Special Offer disini ygy
-                binding.specialOffer.text = it.data.food_name
+                adapterSpecialOffer = AdapterSpecialOffer(it.data,
+                    onClick = {food_slug ->
+                        navigateToDetail(food_slug)
+                    })
+                binding.rvMainCategory.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+                binding.rvMainCategory.adapter = adapterSpecialOffer
             }
         }
         return binding.root
