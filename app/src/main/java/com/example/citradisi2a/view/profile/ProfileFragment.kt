@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.citradisi2a.databinding.FragmentProfileBinding
-import com.example.citradisi2a.model.adapter.AdapterSpecialOffer
-import com.example.citradisi2a.viewmodel.HomeViewModel
 import com.example.citradisi2a.viewmodel.ProfileViewModel
 
 class ProfileFragment : Fragment() {

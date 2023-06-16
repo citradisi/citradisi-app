@@ -61,28 +61,28 @@ class HomeActivity() : AppCompatActivity() {
                     ).navigate(R.id.berandaFragment)
                     true
                 }
-                R.id.food_nav -> {
-                    Navigation.findNavController(
-                        this, binding.fragmentContainerView2.id
-                    ).navigate(R.id.berandaFragment)
-                    true
-                }
-                R.id.bookmark_nav ->{
-                    Navigation.findNavController(
-                        this, binding.fragmentContainerView2.id
-                    ).navigate(R.id.listFavoriteFragment)
-                    true
-                }
+//                R.id.food_nav -> {
+//                    Navigation.findNavController(
+//                        this, binding.fragmentContainerView2.id
+//                    ).navigate(R.id.berandaFragment)
+//                    true
+//                }
+//                R.id.bookmark_nav ->{
+//                    Navigation.findNavController(
+//                        this, binding.fragmentContainerView2.id
+//                    ).navigate(R.id.listFavoriteFragment)
+//                    true
+//                }
                 R.id.scan_nav -> {
                     dispatchTakePictureIntent()
                     true
                 }
-                R.id.profile_nav -> {
-                    Navigation.findNavController(
-                        this, binding.fragmentContainerView2.id
-                    ).navigate(R.id.profileFragment)
-                    true
-                }
+//                R.id.profile_nav -> {
+//                    Navigation.findNavController(
+//                        this, binding.fragmentContainerView2.id
+//                    ).navigate(R.id.profileFragment)
+//                    true
+//                }
                 else -> false
             }
         }
@@ -108,7 +108,7 @@ class HomeActivity() : AppCompatActivity() {
     val documentLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         val contentResolver = this.contentResolver
         val imageBitmap = MediaStore.Images.Media.getBitmap(contentResolver, uri)
-        homeViewModel.storeImage(imageBitmap, 100)
+        homeViewModel.storeImage(imageBitmap, 150)
     }
     fun dispatchTakePictureIntent() {
         val pickImage = "Pick Image"
